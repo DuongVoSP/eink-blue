@@ -1,0 +1,185 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.card {
+  width: min(520px, 100%);
+  background: var(--panel);
+  border: 2px solid var(--line);
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: 22px 22px 18px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field span,
+.row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+textarea,
+input[type="number"],
+select {
+  width: 100%;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 0;
+}
+
+textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  gap: 8px;
+  margin: 0 0 10px;
+  min-height: 38px;
+  font-weight: 600;
+}
+
+.preview-wrap {
+  border: 2px solid var(--line);
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.preview-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+button {
+  border: 1.5px solid var(--line);
+  background: #fff;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #111;
+  color: #fff;
+}
+
+button.primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #333;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.status {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  font-size: 0.9rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background: #888;
+}
+
+.dot.ok {
+  background: var(--ok);
+}
+
+.dot.busy {
+  background: var(--busy);
+}
+
+.dot.err {
+  background: var(--err);
+}
+
+.progress {
+  margin-top: 8px;
+  height: 10px;
+  border: 1px solid var(--line);
+  background: #eee;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+}
+
+.hint,
+.error,
+.gatt {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 8px 0 0;
+  line-height: 1.4;
+}
+
+.error {
+  color: var(--err);
+}
+
+.gatt {
+  max-height: 120px;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: #f7f4ea;
+  border: 1px solid #ddd6c2;
+  padding: 8px;
+}
